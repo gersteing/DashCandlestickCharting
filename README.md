@@ -2,10 +2,14 @@
 
 ------------------------------------------------Running the Project Code---------------------------------------------------------------
 This is a sample project for folks trying to use the Plotly and Dash candlestick charts. The problem with the Plotly Candlestick Graph object is there are no good y axis sliders by default to adjust the vertical range of bars in the chart.  This example provides x-axis date range sliders that when adjusted will automatically update the y axis to show the vertical range of only the visible bars plus a small 2 tick padding. The built in panning features of the Dash candlestick graph can then be used to move around easily in the view. Thanks to the authors of the Plotly and Dash libraries for their amazing work! 
+
+
 Running this example using python and Flask
 
+There is only one file for this project called dash_plotly_candlestick.py. To run the project just run this file using the python command prompt. However, you will need to make sure you have the necessary dependencies installed. 
+
 This project requires you install python. This was developed with python 3.6.5
-The following packages were also installed using pip. 
+The following packages were also installed using pip at the time I authored the code. 
 
 Package              Version
 -------------------- ---------
