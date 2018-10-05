@@ -28,7 +28,9 @@ Instead
 2) (Optional) start any python virtual environment if you want to run the code in a python virtual environment
 3) Navigate to your project directory where you have your python scripts, or type in the full path to you python script and run the primary script (dash_plotly_candlestick.py) to run the code. This assumes python is installed and the path variable is set in windows. The $ represents the windows command prompt:
 $ python dash_plotly_candlestick.py
-4) Then open a browser at the following address: http:127.0.0.1:8050/ and you will see the candlestick chart in your web browser.
+4) Then open a browser at the following address: 
+http:127.0.0.1:8050/ 
+You will see the candlestick chart in your web browser.
 
 If python has been added to the path in your local environment variables you can just double click on the dash_plotly_candlestick.py and it should run. See https://stackoverflow.com/questions/3701646/how-to-add-to-the-pythonpath-in-windows to add python to your system path. 
 
