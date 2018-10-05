@@ -59,7 +59,7 @@ Then open a browser at the following address: http:127.0.0.1:8050/
 A full tutorial on using Dash is available from the Dash website:
 https://dash.plot.ly/
 
------------------------Running Code from a python virtual environment---------------------------------------
+-----------------------------------------Running Code from a python virtual environment-----------------------------------------------
 You may want to develop scripts in idle and run them using a python virtual environment so you have all the libraries you want configured just for that project. 
 
 Problem is if you open idle from the normal shortcuts, it opens idle and uses the default python installation, not your virtual environment so the libraries you may have installed in your virtual environment will not be available to your idle instance. 
