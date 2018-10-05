@@ -21,10 +21,10 @@ To start this project just run the main file called dash_plotly_candlestick.py. 
 
 This project requires you install python. This was developed with python 3.6.5
 
-The only libraries I installed were Dash, plotly, pytz, and pandas.
+The only other dependencies I installed were Dash, plotly, pytz, and pandas.
 Need to understand these libraries better to make sense of this example? See section below - Installing and Getting Help with the Dependent Libraries
 
-You cannot start a flask server from within the idle python editor application so openning the file in idle and hitting Run will cause an error. 
+The only thing that might trip you up when running this example is if you try to run the script from the idle python editor. You cannot start a flask server from within the idle python editor application so openning the file in idle and hitting Run will cause an error. 
 
 Instead
 1) open a windows command prompt
@@ -44,7 +44,7 @@ https://dash.plot.ly/
 
 Installing and Getting Help with the Dependent Libraries
 --------------------------------------------------------
-Flask is an application that provides for python web application creation. We are trying out a framework called Dash which provides the ability to create charting applications including candlestick charts. Dash uses plotly Plotly.js, and React.js, and Flask and can be run locally on a flask server which is a python web server. The challenge is starting the flask server correctly. 
+Flask is an application that provides for python web application creation. We are trying out a framework called Dash which provides the ability to create charting applications including candlestick charts. Dash uses plotly Plotly.js, and React.js, and Flask and can be run locally on a flask server which is a python web server. 
 
 The following packages were also installed using pip at the time I authored the code. 
 
