@@ -87,7 +87,9 @@ The only libraries I installed were Dash, plotly, pytz, and pandas. Below is how
 For dash you have to install three libraries (see Dash installation guide https://dash.plot.ly/installation)
 
 $pip install dash==0.28.1  # The core dash backend
+
 $pip install dash-html-components==0.13.2  # HTML components
+
 $pip install dash-core-components==0.30.2  # Supercharged components
 
 Dash component are not that difficult to understand you are basically setting the values for a bunch of nested python dictionaries to configure the components which are just wrappers for html code. These reference was very helpful for me to understand how to configure the sliders, and candlestick chart propoerties. I used this to understand how to configure the x slider and use callbacks to update the chart (graph) ranges. 
