@@ -12,12 +12,12 @@ dash_plotly_candlestick.py = code for a basic candlestick chart with x axis rang
 
 dash_plotly_candlestick_with_multiple_traces-overlays.py = an additional example where I parse out some data to use as an overlay over the bars. 
 
-Note that this code is heavily commented. There are also many print lines commented out that can be enabled if you want to print the values of variables in the defined functions. Since this is intended as a shared example, I wanted to make it as informative as possible, but you would want to remove this overehead if using in any production context. 
+Note that this code is heavily commented. There are also many print lines commented out that can be enabled if you want to print the values of variables in the defined functions. Since this is intended as a shared example, I wanted to make it as informative as possible, but you would want to remove this overhead if using in any production context. 
 
 
 Running this Example Using Python and Flask
 -------------------------------------------
-To start this project just rund the main file called dash_plotly_candlestick.py. You can run the file from the python command prompt. However, you will need to make sure you have the necessary dependencies installed. 
+To start this project just run the main file called dash_plotly_candlestick.py. You can run the file from the python command prompt. However, you will need to make sure you have the necessary dependencies installed. 
 
 This project requires you install python. This was developed with python 3.6.5
 The following packages were also installed using pip at the time I authored the code. 
