@@ -160,16 +160,18 @@ firstTrace = go.Candlestick(
     low=df.low,
     close=df.close)
 ## This is an example of a second trace which we might use for example for swing data
-secondTrace = go.Scatter(
-    x=df2.time,
-    y=df.high,
-    line=dict(
-        color='black',
-        width=1,
-        shape='linear'
-        )
-   )
-data = [firstTrace, secondTrace]
+##secondTrace = go.Scatter(
+##    x=df2.time,
+##    y=df.high,
+##    line=dict(
+##        color='black',
+##        width=1,
+##        shape='linear'
+##        )
+##   )
+##data = [firstTrace, secondTrace]
+
+data = [firstTrace]
 
 layout = go.Layout(
     xaxis=dict(
