@@ -1,7 +1,12 @@
 # DashCandlestickCharting
 
 ------------------------------------------------Description---------------------------------------------------------------
-This is a sample project for folks trying to use the Plotly and Dash candlestick charts. The problem with the Plotly Candlestick Graph object is there are no good y axis sliders by default to adjust the vertical range of bars in the chart.  This example provides x-axis date range sliders that when adjusted will automatically update the y axis to show the vertical range of only the visible bars plus a small 2 tick padding. The built in panning features of the Dash candlestick graph can then be used to move around easily in the view. Thanks to the authors of the Plotly and Dash libraries for their amazing work! 
+This is a sample project for folks trying to use the Plotly and Dash candlestick charts. Plotly and Dash can be used to plot different types of data on charts. In this case we are using a candlestick chart which plots some market price data. Candlestick charts are commonly used by day traders. See this quick tutorial on candlestick charts if you don't know what the are. 
+https://www.investopedia.com/walkthrough/forex/beginner/level3/candlestick.aspx
+
+The problem with the Plotly Candlestick Graph object is there are no good y axis sliders built in to adjust the vertical range of bars data in the chart.  This example provides x-axis date range sliders that, when adjusted, will automatically update the y axis to show the only vertical range of the visible bars plus a small 2 tick padding. The built in panning features of the Dash candlestick graph can then be used to move around easily in the chart view. Thanks to the authors of the Plotly and Dash libraries for their amazing work! 
+
+Note that this code is heavily commented. There are also many print lines commented out that can be enabled if you want to print the values of variables in the defined functions. Since this is intended as a shared example, I wanted to make it as informative as possible, but you would want to remove this overehead if using in any production context. 
 
 
 Running this example using python and Flask
@@ -45,22 +50,25 @@ traitlets            4.3.2
 urllib3              1.23
 Werkzeug             0.14.1
 
-Flask is an application that provides for python web application creation. We are trying out a framework called dash which provides the ability to create charting applications 
-including candlestick charts. Dash uses plotly Plotly.js, and React.js, and Flask and can be run locally on a flask server. The challenge is starting the flask server correctly.
+Flask is an application that provides for python web application creation. We are trying out a framework called Dash which provides the ability to create charting applications including candlestick charts. Dash uses plotly Plotly.js, and React.js, and Flask and can be run locally on a flask server. The challenge is starting the flask server correctly.
+
 You cannot start a flask server from within the idle application so going into idle
 and hitting Run will cause an error. 
 
 Instead
 1) open a windows command prompt
 2) start any python virtual environment in which you want to run code
-3) Navigate to your project directory where you have your python scripts, or type in the full path to you python script and run your primary script to start the flask server directly using the python executable. This assumes python is installed and the path variable is set in windows:
-$python dash_plotly_candlestick.py
+3) Navigate to your project directory where you have your python scripts, or type in the full path to you python script and run the primary script (dash_plotly_candlestick.py) to start the flask server directly using the python executable. This assumes python is installed and the path variable is set in windows/ the $ represents the windows command prompt:
+$ python dash_plotly_candlestick.py
 
 If python has been added to the path in your local environment variables you can just double click on the dash_plotly_candlestick.py and it should run. See https://stackoverflow.com/questions/3701646/how-to-add-to-the-pythonpath-in-windows to add python to your system path and 
 
-Then open a browser at the following address: http:127.0.0.1:8050/ 
+Then open a browser at the following address: http:127.0.0.1:8050/
+You should see a candlestick chart with data loaded from a local data file that contains bar data:
+20180923TradingTestDataExportCSV.csv
+This file is located in the same directory as the dash_plotly_candlestick.py script.
  
-A full tutorial on using Dash is available from the Dash website:
+For more information, a full tutorial on using Dash is available from the Dash website:
 https://dash.plot.ly/
 
 -----------------------------------------Running Code from a python virtual environment-----------------------------------------------
