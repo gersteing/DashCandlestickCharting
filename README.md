@@ -6,7 +6,7 @@ https://www.investopedia.com/walkthrough/forex/beginner/level3/candlestick.aspx
 
 The problem with the default Plotly Candlestick chart objects (graphs) is there are no good y axis sliders built in to adjust the vertical range of bar price data in the chart.  This example code provides x-axis date range sliders that, when adjusted, will automatically update the y axis to show the only vertical range of the visible bars plus a small 2 tick padding. The built in panning features of the Dash candlestick graph can then be used to move around easily in the chart view. Thanks to the authors of the Plotly and Dash libraries for their amazing work! 
 
-Files included:
+## Files included:
 ---------------
 dash_plotly_candlestick.py = code for a basic candlestick chart with x axis range slider that automatically sizes y axis nicely
 
@@ -15,7 +15,7 @@ dash_plotly_candlestick_with_multiple_traces-overlays.py = an additional example
 Note that this code is heavily commented. There are also many print lines commented out that can be enabled if you want to print the values of variables in the defined functions. Since this is intended as a shared example, I wanted to make it as informative as possible, but you would want to remove this overhead if using in any production context. 
 
 
-Running this Example Using Python and Flask
+## Running this Example Using Python and Flask
 -------------------------------------------
 To start this project just run the main file called dash_plotly_candlestick.py. You can run the file from the python command prompt. However, you will need to make sure you have the necessary dependencies installed. 
 
@@ -41,7 +41,7 @@ This file is located in the same directory as the dash_plotly_candlestick.py scr
 For more information, a full tutorial on using Dash is available from the Dash website:
 https://dash.plot.ly/
 
-Installing and Getting Help with the Dependent Libraries
+## Installing and Getting Help with the Dependent Libraries
 --------------------------------------------------------
 Flask is an application that provides for python web application creation. We are trying out a framework called Dash which provides the ability to create charting applications including candlestick charts. Dash uses plotly Plotly.js, and React.js, and Flask and can be run locally on a flask server which is a python web server. 
 
@@ -83,7 +83,7 @@ Package              Version
 
 The only libraries I installed were Dash, plotly, pytz, and pandas. Below is how I installed them and where you can find resources about each library.
 
-# Dash
+### Dash
 For dash you have to install three libraries (see Dash installation guide https://dash.plot.ly/installation)
 
 $pip install dash==0.28.1  # The core dash backend
@@ -94,7 +94,7 @@ Dash component are not that difficult to understand you are basically setting th
 https://dash.plot.ly/dash-core-components - list of components and how to configure them
 https://dash.plot.ly/ Dash tutorials to explain the framework
 
-# Plotly
+###  Plotly
 To install the plotly libraries see plotly installation guide https://plot.ly/python/getting-started.
 
 $pip install plotly 
@@ -102,7 +102,7 @@ $pip install plotly
 Plotly is a seperate library from Dash. Dash is to display the html output. Plotly is the core library for creating the figures and is used by Dash. These tutorials were helpful, but the most helpful was the reference materials to all of the graph properties. 
 https://plot.ly/python/reference/
 
-# Pytz
+###  Pytz
 Pytz is a date library to help with using the python datetime objects. Installation instructions are here: https://pypi.org/project/pytz/
 
 $pip install pytz
@@ -112,7 +112,7 @@ https://howchoo.com/g/ywi5m2vkodk/working-with-datetime-objects-and-timezones-in
 https://www.w3schools.com/python/python_datetime.asp
 https://docs.python.org/3/library/datetime.html
 
-# Pandas
+###  Pandas
 The pandas libary is a great data manipulation library. You can get install instructions and help here:
 https://pandas.pydata.org/ 
 
@@ -122,11 +122,11 @@ The pandas library takes some learning. I only use a small portionk, but I found
 http://pandas.pydata.org/pandas-docs/stable/10min.html
 https://www.shanelynn.ie/select-pandas-dataframe-rows-and-columns-using-iloc-loc-and-ix/
 
-# Flask
+###  Flask
 You need to know almost nothing about Flask to run this code. There is just a couple lines that run a flask server. Dash automatically runs on top of the Flask server. The only thing that matters is that by using flask it allows us to see the Dash html output becuase you are running dash on a local Flask web server at address: http:127.0.0.1:8050/
 If you want to know more about Flask you can find info here: http://flask.pocoo.org/docs/1.0/
 
-Editing Code from a Python Virtual Environment
+## Editing Code from a Python Virtual Environment
 ----------------------------------------------
 You may want to develop scripts in idle and run them using a python virtual environment so you have all the libraries you want configured just for that project. 
 
