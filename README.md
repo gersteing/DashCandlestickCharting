@@ -26,7 +26,7 @@ The only other thing that might trip you up when running this example is if you 
 Instead
 1) open a windows command prompt
 2) (Optional) start any python virtual environment if you want to run the code in a python virtual environment
-3) Navigate to your project directory where you have your python scripts, or type in the full path to you python script and run the primary script (dash_plotly_candlestick.py) to start the flask server directly using the python executable. This assumes python is installed and the path variable is set in windows. The $ represents the windows command prompt:
+3) Navigate to your project directory where you have your python scripts, or type in the full path to you python script and run the primary script (dash_plotly_candlestick.py) to run the code. This assumes python is installed and the path variable is set in windows. The $ represents the windows command prompt:
 $ python dash_plotly_candlestick.py
 4) Then open a browser at the following address: http:127.0.0.1:8050/ and you will see the candlestick chart in your web browser.
 
