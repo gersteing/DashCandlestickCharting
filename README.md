@@ -7,7 +7,9 @@ https://www.investopedia.com/walkthrough/forex/beginner/level3/candlestick.aspx
 The problem with the Plotly Candlestick Graph object is there are no good y axis sliders built in to adjust the vertical range of bars data in the chart.  This example provides x-axis date range sliders that, when adjusted, will automatically update the y axis to show the only vertical range of the visible bars plus a small 2 tick padding. The built in panning features of the Dash candlestick graph can then be used to move around easily in the chart view. Thanks to the authors of the Plotly and Dash libraries for their amazing work! 
 
 Files included:
+---------------
 dash_plotly_candlestick.py = code for a basic candlestick chart with x axis range slider that automatically sizes y axis nicely
+
 dash_plotly_candlestick_with_multiple_traces-overlays.py = an additional example where I parse out some data to use as an overlay over the bars. 
 
 Note that this code is heavily commented. There are also many print lines commented out that can be enabled if you want to print the values of variables in the defined functions. Since this is intended as a shared example, I wanted to make it as informative as possible, but you would want to remove this overehead if using in any production context. 
