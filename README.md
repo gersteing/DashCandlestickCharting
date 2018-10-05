@@ -1,6 +1,6 @@
 # DashCandlestickCharting
-
-------------------------------------------------Description---------------------------------------------------------------
+Description
+-----------
 This is a sample project for folks trying to use the Plotly and Dash candlestick charts. Plotly and Dash can be used to plot different types of data on charts. In this case we are using a candlestick chart which plots some market price data. Candlestick charts are commonly used by day traders. See this quick tutorial on candlestick charts if you don't know what the are. 
 https://www.investopedia.com/walkthrough/forex/beginner/level3/candlestick.aspx
 
@@ -71,7 +71,8 @@ This file is located in the same directory as the dash_plotly_candlestick.py scr
 For more information, a full tutorial on using Dash is available from the Dash website:
 https://dash.plot.ly/
 
------------------------------------------Running Code from a python virtual environment-----------------------------------------------
+Running Code from a Python Virtual Environment
+----------------------------------------------
 You may want to develop scripts in idle and run them using a python virtual environment so you have all the libraries you want configured just for that project. 
 
 Problem is if you open idle from the normal shortcuts, it opens idle and uses the default python installation, not your virtual environment so the libraries you may have installed in your virtual environment will not be available to your idle instance. 
