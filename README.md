@@ -4,7 +4,7 @@ Description
 This is a sample project for folks trying to use the Plotly and Dash candlestick charts. Plotly and Dash can be used to plot different types of data on charts. In this case we are using a candlestick chart which plots some market price data. Candlestick charts are commonly used by day traders. See this quick tutorial on candlestick charts if you don't know what the are. 
 https://www.investopedia.com/walkthrough/forex/beginner/level3/candlestick.aspx
 
-The problem with the Plotly Candlestick Graph object is there are no good y axis sliders built in to adjust the vertical range of bars data in the chart.  This example provides x-axis date range sliders that, when adjusted, will automatically update the y axis to show the only vertical range of the visible bars plus a small 2 tick padding. The built in panning features of the Dash candlestick graph can then be used to move around easily in the chart view. Thanks to the authors of the Plotly and Dash libraries for their amazing work! 
+The problem with the default Plotly Candlestick chart objects (graphs) is there are no good y axis sliders built in to adjust the vertical range of bar price data in the chart.  This example code provides x-axis date range sliders that, when adjusted, will automatically update the y axis to show the only vertical range of the visible bars plus a small 2 tick padding. The built in panning features of the Dash candlestick graph can then be used to move around easily in the chart view. Thanks to the authors of the Plotly and Dash libraries for their amazing work! 
 
 Files included:
 ---------------
