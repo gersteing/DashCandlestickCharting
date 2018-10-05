@@ -82,6 +82,9 @@ Package              Version
 * urllib3              1.23
 * Werkzeug             0.14.1 
 
+The only libraries I installed were Dash, plotly, pytz, and pandas. Below is how I installed them and where you can find resources about each library.
+
+#Dash
 For dash you have to install three libraries (see Dash installation guide https://dash.plot.ly/installation)
 
 $pip install dash==0.28.1  # The core dash backend
@@ -92,6 +95,7 @@ Dash component are not that difficult to understand you are basically setting th
 https://dash.plot.ly/dash-core-components - list of components and how to configure them
 https://dash.plot.ly/ Dash tutorials to explain the framework
 
+#Plotly
 To install the plotly libraries see plotly installation guide https://plot.ly/python/getting-started.
 
 $pip install plotly 
@@ -99,6 +103,7 @@ $pip install plotly
 Plotly is a seperate library from Dash. Dash is to display the html output. Plotly is the core library for creating the figures and is used by Dash. These tutorials were helpful, but the most helpful was the reference materials to all of the graph properties. 
 https://plot.ly/python/reference/
 
+#Pytz
 Pytz is a date library to help with using the python datetime objects. Installation instructions are here: https://pypi.org/project/pytz/
 
 $pip install pytz
@@ -108,6 +113,7 @@ https://howchoo.com/g/ywi5m2vkodk/working-with-datetime-objects-and-timezones-in
 https://www.w3schools.com/python/python_datetime.asp
 https://docs.python.org/3/library/datetime.html
 
+#Pandas
 The pandas libary is a great data manipulation library. You can get install instructions and help here:
 https://pandas.pydata.org/ 
 
