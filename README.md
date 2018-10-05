@@ -9,7 +9,7 @@ The problem with the Plotly Candlestick Graph object is there are no good y axis
 Note that this code is heavily commented. There are also many print lines commented out that can be enabled if you want to print the values of variables in the defined functions. Since this is intended as a shared example, I wanted to make it as informative as possible, but you would want to remove this overehead if using in any production context. 
 
 
-Running this example using python and Flask
+Running this Example Using Python and Flask
 -------------------------------------------
 There is only one file for this project called dash_plotly_candlestick.py. To run the project just run this file using the python command prompt. However, you will need to make sure you have the necessary dependencies installed. 
 
