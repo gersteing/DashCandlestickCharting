@@ -19,22 +19,19 @@ Running this Example Using Python and Flask
 -------------------------------------------
 To start this project just run the main file called dash_plotly_candlestick.py. You can run the file from the python command prompt. However, you will need to make sure you have the necessary dependencies installed. 
 
-This project requires you install python. This was developed with python 3.6.5
+This project requires you install python. This was developed with python 3.6.5. The only other dependencies I installed were Dash, plotly, pytz, and pandas. Need help to install or understand these libraries better to make sense of this example? See section below - Installing and Getting Help with the Dependent Libraries
 
-The only other dependencies I installed were Dash, plotly, pytz, and pandas.
-Need to understand these libraries better to make sense of this example? See section below - Installing and Getting Help with the Dependent Libraries
-
-The only thing that might trip you up when running this example is if you try to run the script from the idle python editor. You cannot start a flask server from within the idle python editor application so openning the file in idle and hitting Run will cause an error. 
+The only other thing that might trip you up when running this example is if you try to run the script from the idle python editor. You cannot start a flask server from within the idle python editor application so openning the file in idle and hitting Run will cause an error. 
 
 Instead
 1) open a windows command prompt
 2) (Optional) start any python virtual environment if you want to run the code in a python virtual environment
-3) Navigate to your project directory where you have your python scripts, or type in the full path to you python script and run the primary script (dash_plotly_candlestick.py) to start the flask server directly using the python executable. This assumes python is installed and the path variable is set in windows/ the $ represents the windows command prompt:
+3) Navigate to your project directory where you have your python scripts, or type in the full path to you python script and run the primary script (dash_plotly_candlestick.py) to start the flask server directly using the python executable. This assumes python is installed and the path variable is set in windows. The $ represents the windows command prompt:
 $ python dash_plotly_candlestick.py
+4) Then open a browser at the following address: http:127.0.0.1:8050/ and you will see the candlestick chart in your web browser.
 
 If python has been added to the path in your local environment variables you can just double click on the dash_plotly_candlestick.py and it should run. See https://stackoverflow.com/questions/3701646/how-to-add-to-the-pythonpath-in-windows to add python to your system path and 
 
-Then open a browser at the following address: http:127.0.0.1:8050/
 You should see a candlestick chart with data loaded from a local data file that contains bar data:
 20180923TradingTestDataExportCSV.csv
 This file is located in the same directory as the dash_plotly_candlestick.py script.
