@@ -43,7 +43,7 @@ https://dash.plot.ly/
 
 ## Installing and Getting Help with the Dependent Libraries
 --------------------------------------------------------
-Flask is an application that provides for python web application creation. We are trying out a framework called Dash which provides the ability to create charting applications including candlestick charts. Dash uses plotly Plotly.js, and React.js, and Flask and can be run locally on a flask server which is a python web server. 
+Flask is an application that provides for python web application creation. We are trying out a framework called Dash which runs on top o of a Flask web server and provides the ability to create charting applications including candlestick charts. Dash uses plotly Plotly.js, and React.js, and Flask and can be run locally on a flask server which is a python web server. 
 
 The following packages were also installed using pip at the time I authored the code. 
 
