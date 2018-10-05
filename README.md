@@ -24,37 +24,37 @@ The following packages were also installed using pip at the time I authored the 
 
 Package              Version
 -------------------- ---------
-*certifi              2018.8.24
-*chardet              3.0.4
-*Click                7.0
-*dash                 0.27.0
-*dash-core-components 0.30.2
-*dash-html-components 0.13.2
-*dash-renderer        0.14.1
-*decorator            4.3.0
-*Flask                1.0.2
-*Flask-Compress       1.4.0
-*idna                 2.7
-*ipython-genutils     0.2.0
-*itsdangerous         0.24
-*Jinja2               2.10
-*jsonschema           2.6.0
-*jupyter-core         4.4.0
-*MarkupSafe           1.0
-*nbformat             4.4.0
-*numpy                1.15.2
-*pandas               0.23.4
-*pip                  18.0
-*plotly               3.3.0
-*python-dateutil      2.7.3
-*pytz                 2018.5
-*requests             2.19.1
-*retrying             1.3.3
-*setuptools           39.0.1
-*six                  1.11.0
-*traitlets            4.3.2
-*urllib3              1.23
-*Werkzeug             0.14.1
+* certifi              2018.8.24
+* chardet              3.0.4
+* Click                7.0
+* dash                 0.27.0
+* dash-core-components 0.30.2
+* dash-html-components 0.13.2
+* dash-renderer        0.14.1
+* decorator            4.3.0
+* Flask                1.0.2
+* Flask-Compress       1.4.0
+* idna                 2.7
+* ipython-genutils     0.2.0
+* itsdangerous         0.24
+* Jinja2               2.10
+* jsonschema           2.6.0
+* jupyter-core         4.4.0
+* MarkupSafe           1.0
+* nbformat             4.4.0
+* numpy                1.15.2
+* pandas               0.23.4
+* pip                  18.0
+* plotly               3.3.0
+* python-dateutil      2.7.3
+* pytz                 2018.5
+* requests             2.19.1
+* retrying             1.3.3
+* setuptools           39.0.1
+* six                  1.11.0
+* traitlets            4.3.2
+* urllib3              1.23
+* Werkzeug             0.14.1 
 
 The only libraries I installed were Dash, plotly, pytz, pandas and pip.
 Need to understand these libraries better to make sense of this example? See section below - Installing and Getting Help with the Dependent Libraries
