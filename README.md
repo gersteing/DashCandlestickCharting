@@ -17,7 +17,7 @@ Note that this code is heavily commented. There are also many print lines commen
 
 Running this Example Using Python and Flask
 -------------------------------------------
-There is only one file for this project called dash_plotly_candlestick.py. To run the project just run this file using the python command prompt. However, you will need to make sure you have the necessary dependencies installed. 
+To start this project just rund the main file called dash_plotly_candlestick.py. You can run the file from the python command prompt. However, you will need to make sure you have the necessary dependencies installed. 
 
 This project requires you install python. This was developed with python 3.6.5
 The following packages were also installed using pip at the time I authored the code. 
@@ -56,14 +56,13 @@ traitlets            4.3.2
 urllib3              1.23
 Werkzeug             0.14.1
 
-Flask is an application that provides for python web application creation. We are trying out a framework called Dash which provides the ability to create charting applications including candlestick charts. Dash uses plotly Plotly.js, and React.js, and Flask and can be run locally on a flask server. The challenge is starting the flask server correctly.
+Flask is an application that provides for python web application creation. We are trying out a framework called Dash which provides the ability to create charting applications including candlestick charts. Dash uses plotly Plotly.js, and React.js, and Flask and can be run locally on a flask server which is a python web server. The challenge is starting the flask server correctly.
 
-You cannot start a flask server from within the idle application so going into idle
-and hitting Run will cause an error. 
+You cannot start a flask server from within the idle python editor application so openning the file in idle and hitting Run will cause an error. 
 
 Instead
 1) open a windows command prompt
-2) start any python virtual environment in which you want to run code
+2) (Optional) start any python virtual environment if you want to run the code in a python virtual environment
 3) Navigate to your project directory where you have your python scripts, or type in the full path to you python script and run the primary script (dash_plotly_candlestick.py) to start the flask server directly using the python executable. This assumes python is installed and the path variable is set in windows/ the $ represents the windows command prompt:
 $ python dash_plotly_candlestick.py
 
@@ -77,11 +76,11 @@ This file is located in the same directory as the dash_plotly_candlestick.py scr
 For more information, a full tutorial on using Dash is available from the Dash website:
 https://dash.plot.ly/
 
-Running Code from a Python Virtual Environment
+Editing Code from a Python Virtual Environment
 ----------------------------------------------
 You may want to develop scripts in idle and run them using a python virtual environment so you have all the libraries you want configured just for that project. 
 
-Problem is if you open idle from the normal shortcuts, it opens idle and uses the default python installation, not your virtual environment so the libraries you may have installed in your virtual environment will not be available to your idle instance. 
+Problem is if you open idle from the normal shortcuts, it opens idle and uses the default python installation, not your virtual environment so the libraries you may have installed in your virtual environment will not be available to your Idle editor instance. 
 
 Note you do not have to use a virtual environment. The dash_plotly_candlestick.py file can be run directly from the python command prompt if you do not use a python virtual environment. But if you want to use a python virtual environment and you need to edit the script from your virtual environment, this may help. 
 
