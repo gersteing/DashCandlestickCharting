@@ -24,39 +24,40 @@ The following packages were also installed using pip at the time I authored the 
 
 Package              Version
 -------------------- ---------
-certifi              2018.8.24
-chardet              3.0.4
-Click                7.0
-dash                 0.27.0
-dash-core-components 0.30.2
-dash-html-components 0.13.2
-dash-renderer        0.14.1
-decorator            4.3.0
-Flask                1.0.2
-Flask-Compress       1.4.0
-idna                 2.7
-ipython-genutils     0.2.0
-itsdangerous         0.24
-Jinja2               2.10
-jsonschema           2.6.0
-jupyter-core         4.4.0
-MarkupSafe           1.0
-nbformat             4.4.0
-numpy                1.15.2
-pandas               0.23.4
-pip                  18.0
-plotly               3.3.0
-python-dateutil      2.7.3
-pytz                 2018.5
-requests             2.19.1
-retrying             1.3.3
-setuptools           39.0.1
-six                  1.11.0
-traitlets            4.3.2
-urllib3              1.23
-Werkzeug             0.14.1
+*certifi              2018.8.24
+*chardet              3.0.4
+*Click                7.0
+*dash                 0.27.0
+*dash-core-components 0.30.2
+*dash-html-components 0.13.2
+*dash-renderer        0.14.1
+*decorator            4.3.0
+*Flask                1.0.2
+*Flask-Compress       1.4.0
+*idna                 2.7
+*ipython-genutils     0.2.0
+*itsdangerous         0.24
+*Jinja2               2.10
+*jsonschema           2.6.0
+*jupyter-core         4.4.0
+*MarkupSafe           1.0
+*nbformat             4.4.0
+*numpy                1.15.2
+*pandas               0.23.4
+*pip                  18.0
+*plotly               3.3.0
+*python-dateutil      2.7.3
+*pytz                 2018.5
+*requests             2.19.1
+*retrying             1.3.3
+*setuptools           39.0.1
+*six                  1.11.0
+*traitlets            4.3.2
+*urllib3              1.23
+*Werkzeug             0.14.1
 
-Flask is an application that provides for python web application creation. We are trying out a framework called Dash which provides the ability to create charting applications including candlestick charts. Dash uses plotly Plotly.js, and React.js, and Flask and can be run locally on a flask server which is a python web server. The challenge is starting the flask server correctly.
+The only libraries I installed were Dash, plotly, pytz, pandas and pip.
+Need to understand these libraries better to make sense of this example? See section below - Installing and Getting Help with the Dependent Libraries
 
 You cannot start a flask server from within the idle python editor application so openning the file in idle and hitting Run will cause an error. 
 
@@ -75,6 +76,45 @@ This file is located in the same directory as the dash_plotly_candlestick.py scr
  
 For more information, a full tutorial on using Dash is available from the Dash website:
 https://dash.plot.ly/
+
+Installing and Getting Help with the Dependent Libraries
+--------------------------------------------------------
+Flask is an application that provides for python web application creation. We are trying out a framework called Dash which provides the ability to create charting applications including candlestick charts. Dash uses plotly Plotly.js, and React.js, and Flask and can be run locally on a flask server which is a python web server. The challenge is starting the flask server correctly. 
+
+For dash you have to install three libraries (see Dash installation guide https://dash.plot.ly/installation)
+
+$pip install dash==0.28.1  # The core dash backend
+$pip install dash-html-components==0.13.2  # HTML components
+$pip install dash-core-components==0.30.2  # Supercharged components
+
+Dash component are not that difficult to understand you are basically setting the values for a bunch of nested python dictionaries to configure the components which are just wrappers for html code. These reference was very helpful for me to understand how to configure the sliders, and candlestick chart propoerties. I used this to understand how to configure the x slider and use callbacks to update the chart (graph) ranges. 
+https://dash.plot.ly/dash-core-components - list of components and how to configure them
+https://dash.plot.ly/ Dash tutorials to explain the framework
+
+To install the plotly libraries see plotly installation guide https://plot.ly/python/getting-started.
+
+$pip install plotly 
+
+Plotly is a seperate library from Dash. Dash is to display the html output. Plotly is the core library for creating the figures and is used by Dash. These tutorials were helpful, but the most helpful was the reference materials to all of the graph properties. 
+https://plot.ly/python/reference/
+
+Pytz is a date library to help with using the python datetime objects. Installation instructions are here: https://pypi.org/project/pytz/
+
+$pip install pytz
+
+One of the more challenging aspects of this code is understanding how to use python date time objects and doing datetime calculations with timezone aware datetime objects. These are resources that helped me get my arms around using datetime objects in python and understand why the pytz libary is helpful.  
+https://howchoo.com/g/ywi5m2vkodk/working-with-datetime-objects-and-timezones-in-python
+https://www.w3schools.com/python/python_datetime.asp
+https://docs.python.org/3/library/datetime.html
+
+The pandas libary is a great data manipulation library. You can get install instructions and help here:
+https://pandas.pydata.org/ 
+
+$pip intall pandas
+
+The pandas library takes some learning. I only use a small portionk, but I found these tutorial really helpful! 
+http://pandas.pydata.org/pandas-docs/stable/10min.html
+https://www.shanelynn.ie/select-pandas-dataframe-rows-and-columns-using-iloc-loc-and-ix/
 
 Editing Code from a Python Virtual Environment
 ----------------------------------------------
