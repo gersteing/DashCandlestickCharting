@@ -84,7 +84,7 @@ Package              Version
 
 The only libraries I installed were Dash, plotly, pytz, and pandas. Below is how I installed them and where you can find resources about each library.
 
-#Dash
+# Dash
 For dash you have to install three libraries (see Dash installation guide https://dash.plot.ly/installation)
 
 $pip install dash==0.28.1  # The core dash backend
@@ -95,7 +95,7 @@ Dash component are not that difficult to understand you are basically setting th
 https://dash.plot.ly/dash-core-components - list of components and how to configure them
 https://dash.plot.ly/ Dash tutorials to explain the framework
 
-#Plotly
+# Plotly
 To install the plotly libraries see plotly installation guide https://plot.ly/python/getting-started.
 
 $pip install plotly 
@@ -103,7 +103,7 @@ $pip install plotly
 Plotly is a seperate library from Dash. Dash is to display the html output. Plotly is the core library for creating the figures and is used by Dash. These tutorials were helpful, but the most helpful was the reference materials to all of the graph properties. 
 https://plot.ly/python/reference/
 
-#Pytz
+# Pytz
 Pytz is a date library to help with using the python datetime objects. Installation instructions are here: https://pypi.org/project/pytz/
 
 $pip install pytz
@@ -113,7 +113,7 @@ https://howchoo.com/g/ywi5m2vkodk/working-with-datetime-objects-and-timezones-in
 https://www.w3schools.com/python/python_datetime.asp
 https://docs.python.org/3/library/datetime.html
 
-#Pandas
+# Pandas
 The pandas libary is a great data manipulation library. You can get install instructions and help here:
 https://pandas.pydata.org/ 
 
@@ -122,6 +122,10 @@ $pip intall pandas
 The pandas library takes some learning. I only use a small portionk, but I found these tutorial really helpful! 
 http://pandas.pydata.org/pandas-docs/stable/10min.html
 https://www.shanelynn.ie/select-pandas-dataframe-rows-and-columns-using-iloc-loc-and-ix/
+
+# Flask
+You need to know almost nothing about Flask to run this code. There is just a couple lines that run a flask server. Dash automatically runs on top of the Flask server. The only thing that matters is that by using flask it allows us to see the Dash html output becuase you are running dash on a local Flask web server at address: http:127.0.0.1:8050/
+If you want to know more about Flask you can find info here: http://flask.pocoo.org/docs/1.0/
 
 Editing Code from a Python Virtual Environment
 ----------------------------------------------
