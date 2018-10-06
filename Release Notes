@@ -10,6 +10,6 @@ no sense because at the time of this writing, I am on east coast time with a -04
 not explained in any way by my current time zone or any other reason I can think of. 
 
 Resolution: I created a test file called DateTests.py to make sure my date to microsecond conversions are working. 
-I also created an offset that gets added to the values of the x slider each time before it those get assigned to the ploytly candlestick x
+I also created an offset that gets added to the values of the x slider each time before those values get assigned to the ploytly candlestick x
 range values. This compensates for this unexplained four hour time shift on the plotly graph. 
 
