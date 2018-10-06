@@ -1,6 +1,4 @@
 # Plotly Dash Candlestick Charting Example with Automatic Y Axis Range Adjustment
-Update 20181005: There is still a bug in this code that I am working out. The date ranges do not quite work yet. The upper range of the chart gets truncated by four hours. It has to do with the timezone calculations. Trying to figure out what is happening. Will post update when available. Thank you for your patience. 
-
 Description
 -----------
 This is a sample project for folks trying to use the Plotly and Dash candlestick charts. Plotly and Dash can be used to plot different types of data on charts. In this case we are using a candlestick chart which plots some market price data. Candlestick charts are commonly used by day traders. See this quick tutorial on candlestick charts if you don't know what the are. 
