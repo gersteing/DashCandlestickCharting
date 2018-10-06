@@ -2,9 +2,11 @@
 import pytz
 from datetime import datetime, date, time, timedelta, timezone
 
-##converts a datetime object to a unix timestamp on milliseconds. The reason is the
-##dash graph objects expect a millisecond time value if the xaxis is a date range. 
-def to_unix_milliseconds(dt):
+##Test code to ensure our date to microsecond conversion functions are working. 
+
+##converts a datetime object to a unix timestamp on microseconds. The reason is the
+##dash graph objects expect a microsecond time value if the xaxis is a date range. 
+def to_unix_microseconds(dt):
     global utcTimeZone
     epoch =  datetime.fromtimestamp(0, tz=utcTimeZone)
     unixTimeStamp = (dt - epoch).total_seconds()
@@ -12,9 +14,9 @@ def to_unix_milliseconds(dt):
 
 
 ##returns an aware date time object that uses localTimeZone for the timezone informatino (tzinfo)
-def utc_milleseconds_to_date(milliseconds):
+def utc_milleseconds_to_date(microseconds):
     global utcTimeZone
-    seconds = milliseconds/1000
+    seconds = microseconds/1000
     ##datetime.fromtimestamp seems to return a time stamp that was four hours off the time stamp of my actual data.
     ##I think the function returns a naive date time object but I am not clear what time zone is assumed. I thought it was utc
     ##but I am in US/Eastern time where the offset should be -5 hours for east coast time, not -4 hours.
@@ -36,20 +38,20 @@ dateformat = '%Y-%m-%d %H:%M:%S'
 testDate = '2012-07-08 18:05:00'
 dateNaive = dateMin = datetime.strptime(testDate,dateformat)
 dateLocalAware = dateNaive.replace(tzinfo=localTimeZone)
-millisecondLocalAware = to_unix_milliseconds(dateLocalAware)
+microsecondLocalAware = to_unix_microseconds(dateLocalAware)
 
 print('dateNaive ' + str(dateNaive))
 print('dateLocalAware ' + str(dateLocalAware))
-print('millisecondLocalAware ' + str(millisecondLocalAware))
-print('convert local milliseconds back to date using utc_milleseconds_to_date function')
-returnedDate = utc_milleseconds_to_date(millisecondLocalAware)
+print('microsecondLocalAware ' + str(microsecondLocalAware))
+print('convert local microseconds back to date using utc_milleseconds_to_date function')
+returnedDate = utc_milleseconds_to_date(microsecondLocalAware)
 print('returned date ' + str(returnedDate))
 
 
 dateUTCAware = dateNaive.replace(tzinfo=utcTimeZone)
-millisecondUTCAware = to_unix_milliseconds(dateUTCAware)
+microsecondUTCAware = to_unix_microseconds(dateUTCAware)
 print('dateUTCAware ' + str(dateUTCAware))
-print('millisecondUTCAware ' + str(millisecondUTCAware))
-print('convert utc milliseconds back to date using utc_milleseconds_to_date function')
-returnedDate = utc_milleseconds_to_date(millisecondUTCAware)
+print('microsecondUTCAware ' + str(microsecondUTCAware))
+print('convert utc microseconds back to date using utc_milleseconds_to_date function')
+returnedDate = utc_milleseconds_to_date(microsecondUTCAware)
 print('returned date ' + str(returnedDate))
