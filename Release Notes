@@ -1,1 +1,15 @@
-# Release Version
+# Release Version: 02828eea96b22e0ef11d6f2bd489aade4bc9f6f3
+There was a problem with this code. The concept was to set a max and min value on our x range slider based on the min and max dates of our 
+bar data. Each time the x axis slider would update we would reassign the date range to the x range of the candlstick graph. Simple right?
+
+Two problems:
+1 The graph x range is set is microsecond so we had to make sure our date conveersions work consistently between datetime objects
+and microseconds. 
+2 The plolty candlestick graph it turns out, no matter what I did with my datetime object timezones was always four hours off exactly. This made
+no sense because at the time of this writing, I am on east coast time with a -04:56 hour minute offset from UTC time. So this offset is
+not explained in any way by my current time zone or any other reason I can think of. 
+
+Resolution: I created a test file called DateTests.py to make sure my date to microsecond conversions are working. 
+I also created an offset that gets added to the values of the x slider each time before it those get assigned to the ploytly candlestick x
+range values. This compensates for this unexplained four hour time shift on the plotly graph. 
+
