@@ -25,7 +25,7 @@ def to_unix_milliseconds(dt):
 
 ##returns an aware date time object that uses localTimeZone for the timezone informatino (tzinfo)
 def utc_milleseconds_to_date(milliseconds):
-    global localTimeZone
+    global utcTimeZone
     seconds = milliseconds/1000
     ##datetime.fromtimestamp seems to return a time stamp that was four hours off the time stamp of my actual data.
     ##I think the function returns a naive date time object but I am not clear what time zone is assumed. I thought it was utc
@@ -38,7 +38,7 @@ def utc_milleseconds_to_date(milliseconds):
     parsedDateTime = datetime.fromtimestamp(seconds)
     ##localize this object back to time zone of the source bar data. My data time stamps were in east coast time.
     ##Adjust the localTimeZone variable to what ever your data time zone is if you are not on east coast time.
-    d_aware =  parsedDateTime.astimezone(localTimeZone)
+    d_aware =  parsedDateTime.astimezone(utcTimeZone)
     return d_aware
 
 ##finds the maximum price or minimum price of the bars in a date range
@@ -67,17 +67,17 @@ def findPriceExtreme(startTime, endTime):
     
 ##gets the index of the bar in the data frame at the given time
 def getRowIndexOfTime(currentDateTime):
-##    print('getRowIndexOfTime function called with arguments ' + str(currentDateTime) )
+    print('getRowIndexOfTime function called with arguments ' + str(currentDateTime) )
     global df
     global dateformat
     roundedDateTime = roundToFiveMinutes(currentDateTime)
-##    print('object type returned from roundToFiveMinutes function ' + str(type(roundedDateTime)))
+    print('object type returned from roundToFiveMinutes function ' + str(type(roundedDateTime)))
     indexTimeString = roundedDateTime.strftime(dateformat)
-##    print('index string for time value ' + indexTimeString)
+    print('index string for time value ' + indexTimeString)
     rowIndex = np.where(df['time']==indexTimeString)[0]
 
     ##rowIndex = np.where(df['time']==indexTimeString)[0]
-##    print('row index of date in csv file: ' + str(rowIndex[0]))
+    print('row index of date in csv file: ' + str(rowIndex[0]))
     return rowIndex[0]
     
 ##rounds up a dateTime to five minute increments. Our bar data is based on five minute bars, but this could be adjusted
@@ -147,10 +147,10 @@ startinPriceExtreme = findPriceExtreme(dateMin,dateMax)
 newRangeLow = round(startinPriceExtreme[0], 4) - tickPadding
 newRangeHigh = round(startinPriceExtreme[1], 4) + tickPadding
 
-##print('starting min date ' +str(dateMin))
-##print('starting max date ' +str(dateMax))
-##print('min timestamp for x slider ' +str(minTimeStamp))
-##print('max timestamp for x slider ' +str(maxTimeStamp))
+print('starting min date ' +str(dateMin))
+print('starting max date ' +str(dateMax))
+print('min timestamp for x slider ' +str(minTimeStamp))
+print('max timestamp for x slider ' +str(maxTimeStamp))
 
 
 
@@ -242,28 +242,28 @@ def adjust_ranges(xSliderValue):
     global tickPadding
    
 ##first calculate any change to the graph range based on x slider
-##    print('get range of xaxis' + str(layout['xaxis']['range']))
-##    print('values returned by x slider ' + str(xSliderValue))
+    print('get range of xaxis' + str(layout['xaxis']['range']))
+    print('values returned by x slider ' + str(xSliderValue))
 ##if the values returned by the slider exceed our allowed range adjust them.
 ##  Range slider can't be trusted. Values returned were not consistent.
     xMinAdjusted = keepInXAxisBounds(xSliderValue[0])
     xMaxAdjusted = keepInXAxisBounds(xSliderValue[1])
-##    print('x slider values corrected for out of bounds values [' + str(xMinAdjusted) + ','+ str(xMaxAdjusted) + ']') 
+    print('x slider values corrected for out of bounds values [' + str(xMinAdjusted) + ','+ str(xMaxAdjusted) + ']') 
     xminDate = utc_milleseconds_to_date(xMinAdjusted)
     xmaxDate = utc_milleseconds_to_date(xMaxAdjusted)
-##    print('x min date object ' + str(xminDate))
-##    print('x max date object ' + str(xmaxDate))
+    print('x min date object ' + str(xminDate))
+    print('x max date object ' + str(xmaxDate))
     xminUTCValue = to_unix_milliseconds(xminDate)
     xmaxUTCValue = to_unix_milliseconds(xmaxDate)
-##    print('setting xmin and ymin millesecond values on x range to : [' + str(xminUTCValue) + ',' + str(xmaxUTCValue) + ']')
+    print('setting xmin and ymin millesecond values on x range to : [' + str(xminUTCValue) + ',' + str(xmaxUTCValue) + ']')
     
 ##next calculate any change to the graph range based on y slider
-##    print('get range of yaxis' + str(layout['yaxis']['range']))
+    print('get range of yaxis' + str(layout['yaxis']['range']))
 ##find bars in date range
     newYRange = findPriceExtreme(xminDate,xmaxDate)
     newRangeLow = round(newYRange[0], 4) - tickPadding
     newRangeHigh = round(newYRange[1], 4) + tickPadding
-##    print('new range low and high for y axis ' + str(newRangeLow) + ',' + str(newRangeHigh))
+    print('new range low and high for y axis ' + str(newRangeLow) + ',' + str(newRangeHigh))
     layout['xaxis']['range']=[xminUTCValue,xmaxUTCValue]
     layout['yaxis']['range']=[newRangeLow,newRangeHigh]
     
