@@ -130,13 +130,15 @@ utcTimeZone = timezone.utc
 chartShift = 14400 * 1000
 dateformat = '%Y-%m-%d %H:%M:%S'
 ##read test bar data from csv file
+rowLimit = 500
 df = pd.read_csv("20180923TradingTestDataExportCSV.csv")
-df = df[:500]
+df = df[:rowLimit]
+
 ##print('data types in frame: ' + str(df.dtypes))
 ##print(df.head())
 ##print(df.tail())
 
-df2= df.loc[:,['time','high']]
+##df2= df.loc[:,['time','high']]
 ##print('df2 head')
 ##print(df2.head())
 
