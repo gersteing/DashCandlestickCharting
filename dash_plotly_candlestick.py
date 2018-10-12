@@ -117,6 +117,28 @@ def keepInXAxisBounds(value):
     else:
         adjustedValue = value
     return adjustedValue
+
+##returns a set of annotations to be used on the chart to label bar numbers.
+def getChartBarNumbers():
+    global df
+    chartBarNumbers = []
+    for index, row in df.iterrows():
+        
+        xValue = row['time']
+        yValue = row['low'] - .0001
+        annotation = dict(
+            x=xValue, y=yValue, xref='x', yref= 'y',
+            showarrow=False, xanchor='center',
+            text=index, font=dict(
+                family='Arial',
+                size=10,
+                color='#000000'
+            )
+        )
+        chartBarNumbers.append(annotation)
+    return chartBarNumbers
+
+
 ## create a utc timezone object that we will assign to all datetime objects and use for all datetime to microsecond conversion and vice versa
 utcTimeZone = timezone.utc
 ##I don't know why by on the plotly chart the range is
@@ -197,6 +219,9 @@ firstTrace = go.Candlestick(
 
 ##create our list of data traces to be plotted on the chart. We will pass this to the plotly figure
 data = [firstTrace]
+
+
+
 ## create our layout and assign to a variable so we can updat the layout later.
 ##NOTES ON PARAMATERS:
 ##layout variable is created so we can access the x and y range values of our graph later in our dash callback functions.
@@ -240,7 +265,9 @@ layout = go.Layout(
         range=[newRangeLow,newRangeHigh]
         
     ),
+    annotations = getChartBarNumbers(),
     height = 800
+    
 )
 ##create our figure with our data and our layout
 figure = go.Figure(data=data,layout=layout)
